@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login-medipoint</title>
+  </head>
+  <body>
+    <form action="/login" method="post">
+      <div class="container">
+        <h1>Login</h1>
+        <p>Please Enter your details</p>
+
+        <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" name="email" required />
+
+        <label for="psw"><b>Password</b></label>
+        <input
+          type="password"
+          placeholder="Enter Password"
+          name="psw"
+          required
+        />
+        <!-- onclick="location.href='/dashboard.html'" -->
+        <div class="clearfix">
+          <button type="submit" class="btn">Login</button>
+        </div>
+        <div class="register">
+          <p>Not registered yet ?</p>
+          <a href="#">Register Now</a>
+        </div>
+      </div>
+    </form>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap");
+
+      body {
+        font-family: Montserrat, Arial, Helvetica, sans-serif;
+        background-color: #f7f7f7;
+      }
+      * {
+        box-sizing: border-box;
+      }
+
+      /* Add padding to container elements */
+      .container {
+        padding: 20px;
+        width: 500px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        background: white;
+        -webkit-box-shadow: 2px 1px 21px -9px rgba(0, 0, 0, 0.38);
+        -moz-box-shadow: 2px 1px 21px -9px rgba(0, 0, 0, 0.38);
+        box-shadow: 2px 1px 21px -9px rgba(0, 0, 0, 0.38);
+      }
+
+      /* Full-width input fields */
+      input[type="text"],
+      input[type="password"] {
+        width: 100%;
+        padding: 15px;
+        margin: 5px 0 22px 0;
+        display: inline-block;
+        border: none;
+        background: #f7f7f7;
+        font-family: Montserrat, Arial, Helvetica, sans-serif;
+      }
+
+      input[type="text"]:focus,
+      input[type="password"]:focus,
+      select:focus {
+        background-color: #ddd;
+        outline: none;
+      }
+
+      /* Set a style for all buttons */
+      button {
+        background-color: #ffd8be;
+        color: rgb(44, 44, 44);
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        opacity: 0.9;
+        font-size: 16px;
+        font-family: Montserrat, Arial, Helvetica, sans-serif;
+        border-radius: 5px;
+      }
+
+      button:hover {
+        opacity: 1;
+      }
+
+      .register {
+        display: flex;
+        background-color: rgb(255, 255, 255);
+        justify-content: flex-start;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .register a {
+        text-decoration: none;
+        width: 50%;
+        padding: 14px 20px;
+        background-color: #a595ff;
+        margin-left: 10px;
+        color: rgb(255, 255, 255);
+        border-radius: 5px;
+        text-align: center;
+      }
+      .register a:hover {
+        background-color: #9381ff;
+      }
+
+      /* Change styles for signup button on extra small screens */
+    </style>
+  </body>
+</html>

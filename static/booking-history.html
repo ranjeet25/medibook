@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="dashboard.css" />
+    <title>Bookings-history-medipoint</title>
+  </head>
+  <body>
+    <nav>
+      <h4>MEDIPOINT-Dashboard</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">My Bookings</a></li>
+        <li><a href="/logout">Logout</a></li>
+      </ul>
+    </nav>
+
+    <div class="disp_usrname">
+      <p>
+        Mr Ranjeet here is your
+        <span> Appointment history</span>
+      </p>
+    </div>
+
+    <div class="main-container">
+
+      <!---------------------------- HISTORY TABLE 01 ---------------------- -->
+      <table>
+        <tr>
+          <td id="col-1">Sr no</td>
+          <td>01</td>
+        </tr>
+        <tr>
+          <td id="col-1">Appointment for</td>
+          <td id="name"></td>
+        </tr>
+
+        <tr>
+          <td id="col-1">Date slot</td>
+          <td id="date"></td>
+        </tr>
+        <tr>
+          <td id="col-1">Status</td>
+          <td>Not Visited</td>
+            <tr>
+          <td id="col-1">Remark</td>
+          <td>N/A</td>
+        </tr>
+
+        <tr>
+          <td id="col-1">Rate</td>
+          <td>4/5</td>
+         </tr>
+         <td id="col-1">Doctor</td>
+          <td id="drcode"></td>
+        </tr>
+      </table>
+<!---------------------------- HISTORY TABLE 02 ---------------------- -->
+       <table>
+        <tr>
+          <td id="col-1">Sr no</td>
+          <td>02</td>
+        </tr>
+        <tr>
+          <td id="col-1">Appointment for</td>
+          <td>Mr Ranjeet saw</td>
+        </tr>
+
+        <tr>
+          <td id="col-1">Date slot</td>
+          <td>16 april 2022</td>
+        </tr>
+        <tr>
+          <td id="col-1">Status</td>
+          <td>Visited</td>
+            <tr>
+          <td id="col-1">Remark</td>
+          <td>N/A</td>
+        </tr>
+
+        <tr>
+          <td id="col-1">Rate</td>
+          <td>4/5</td>
+        </tr>
+         <td id="col-1">Doctor</td>
+          <td>Dr Ram Krishna</td>
+        </tr>
+      </table>
+
+      <!---------------------------- HISTORY TABLE 03 ---------------------- -->
+        <table>
+        <tr>
+          <td id="col-1">Sr no</td>
+          <td>03</td>
+        </tr>
+        <tr>
+          <td id="col-1">Appointment for</td>
+          <td>Mr Ranjeet saw</td>
+        </tr>
+
+        <tr>
+          <td id="col-1">Date slot</td>
+          <td>16 april 2022</td>
+        </tr>
+        <tr>
+          <td id="col-1">Status</td>
+          <td>Visited</td>
+            <tr>
+          <td id="col-1">Remark</td>
+          <td>N/A</td>
+        </tr>
+
+        <tr>
+          <td id="col-1">Rate</td>
+          <td>4/5</td>
+        </tr>
+         <td id="col-1">Doctor</td>
+          <td>Dr Ram Krishna</td>
+        </tr>
+
+
+      </table>
+    </div>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=DM+Sans&family=PT+Sans:ital@0;1&family=Poppins:ital,wght@0,400;1,500&family=Quicksand:wght@300;400&family=Raleway&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --c1: #9381ff;
+        --c2: #b8b8ff;
+        --c3: #f8f7ff;
+        --c4: #ffeedd;
+        --c5: #ffd8be;
+      }
+      .main-container {
+        width: 100vw;
+        height: 70vh;
+        background-color: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-around;
+        box-sizing: border-box;
+
+        padding: 20px 30px;
+        
+      }
+      table {
+        box-shadow: rgba(0, 0, 0, 0.171) 0px 2px 8px 0px;
+        transform: scale(0.9);
+      }
+
+      table tr td {
+        background-color: #dcdcff;
+        padding: 20px;
+        font-family: "DM Sans", sans-serif;
+        width: 300px;
+        
+      }
+
+      #col-1 {
+        background-color: #ffffff;
+        width: 150px;
+        color: #181818; 
+      }
+    </style>
+
+
+<script>
+   const url = "http://localhost:5000/booking-history";
+      async function get() {
+        var res = await fetch(url);
+        var data = await res.json();
+        // document.getElementById("detail").innerHTML = data.Detail;
+        // document.getElementById("favnos").innerHTML = data.favnos;
+        document.getElementById("name").innerHTML = data[0].name;
+        document.getElementById("date").innerHTML = data[0].date;
+        document.getElementById("drcode").innerHTML = data[0].drcode;
+        //document.getElementById("phone").innerHTML = data.phone_no;
+      }
+
+      get();
+</script>
+  </body>
+</html>

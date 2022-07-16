@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&family=PT+Sans:ital@0;1&family=Poppins:ital,wght@0,400;1,500&family=Quicksand:wght@300;400&family=Raleway&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --c1: #9381ff;
+  --c2: #b8b8ff;
+  --c3: #f8f7ff;
+  --c4: #ffeedd;
+  --c5: #ffd8be;
+}
+
+/****************************** navbar *****************************/
+
+nav {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background: #8c76f8;
+
+  box-sizing: border-box;
+  border-bottom: 5px solid #c2b7ff;
+  z-index: 100;
+  position: sticky;
+  top: 0;
+}
+
+nav h4 {
+  color: #6042f8;
+  width: 300px;
+  font-size: 1rem;
+  padding: 5px 10px;
+  border-radius: 3px;
+  margin-left: 20px;
+  font-family: "Poppins", sans-serif;
+  background: #f9f7ff;
+  box-shadow: rgba(0, 0, 0, 0.171) 0px 2px 8px 0px;
+}
+nav ul {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+nav li {
+  list-style: none;
+  padding: 15px;
+}
+
+nav li a {
+  text-decoration: none;
+  color: #505050;
+  border-radius: 3px;
+  padding: 7px 15px;
+  font-size: 0.9rem;
+  background: #f9f7ff;
+  box-shadow: rgba(0, 0, 0, 0.055) 0px 2px 8px 0px;
+  transition: 0.1s ease-out;
+}
+nav li a:hover {
+  color: #181818;
+  font-weight: 600;
+  border-bottom: 4px solid #ffffff;
+}
+
+/****************************** disp_usrname *****************************/
+
+.disp_usrname p {
+  position: sticky;
+  margin: 20px 135px;
+  background: #8670ff;
+  min-width: 400px;
+  padding: 15px;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+  color: #ffffff;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+.disp_usrname span {
+  background: #f7f6ff;
+  margin-left: 5px;
+  padding: 5px 8px;
+  border-radius: 2px;
+  color: #181818;
+  font-family: "DM Sans", sans-serif;
+  font-size: 1rem;
+}
+/****************************** container-1 *****************************/
+
+.container-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  justify-content: space-evenly;
+  height: 120vh;
+}
+
+.container-1 .list-box {
+  display: grid;
+  grid-template-columns: repeat(3, 400px);
+  grid-template-rows: repeat(3, 250px);
+  grid-gap: 20px;
+}
+
+.container-1 .box {
+  background: #f5f5f5;
+  padding: 20px;
+}
+
+.container-1 .box h2 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.3rem;
+  background: #ffffff;
+  padding: 10px 20px;
+  color: #464646;
+  border-top-left-radius: 3px;
+  border: 1px solid #181818;
+  box-shadow: rgba(0, 0, 0, 0.11) 0px 2px 8px 0px;
+}
+.container-1 .box p {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1rem;
+
+  padding: 10px 20px;
+  color: #505050;
+  border-top-left-radius: 3px;
+}
+
+.container-1 .box #drcode {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.8rem;
+  background: none;
+  padding: 4px 20px;
+  margin: 5px 20px;
+  color: #ffffff;
+  border-radius: 3px;
+  background-color: #8670ff;
+  display: inline;
+}
+.container-1 .box #address {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.8rem;
+  background: none;
+  padding: 8px 20px;
+
+  color: #202020;
+  border-top-left-radius: 3px;
+}
+
+.container-1 .box a {
+  text-decoration: none;
+  font-family: "DM Sans", sans-serif;
+  font-size: 1rem;
+  background: #ffffff;
+  margin: 10px;
+  padding: 5px 15px;
+  color: #3b3b3b;
+  box-shadow: rgba(0, 0, 0, 0.089) 0px 2px 8px 0px;
+  position: relative;
+  top: 30px;
+  left: 0px;
+}
+
+.container-1 .box a:hover {
+  box-shadow: rgba(0, 0, 0, 0) 0px 2px 8px 0px;
+  border: 1px solid #2e2e2e;
+}
+
+.view-more {
+  position: absolute;
+  right: 150px;
+}
+.view-more button {
+  padding: 10px 20px;
+  border: none;
+  font-family: "DM Sans", sans-serif;
+  background: #414141;
+  color: #f7f6ff;
+  cursor: pointer;
+}

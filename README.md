@@ -1,2 +1,2 @@
-# medibook
-A web application to book appointments directly from your comfortzone
+# Medipoint
+A health related portral where you can book appointments for doctor visit , Blood test, Xray test etc , Buy medicine and other facilities.
